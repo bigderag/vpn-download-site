@@ -1,5 +1,7 @@
 # دانلود OpenVPN
 
+**نسخه آنلاین:** [bigderag.github.io/vpn-download-site](https://bigderag.github.io/vpn-download-site/)
+
 صفحه‌ی دانلود OpenVPN و کانفیگ‌های آماده با رابط کاربری فارسی، واکنش‌گرا و پشتیبانی از حالت روشن و تاریک.
 
 ## اجرای محلی

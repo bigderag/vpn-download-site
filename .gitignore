@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+.github-token
+*.log
+*.zip

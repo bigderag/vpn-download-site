@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>دانلود OpenVPN</title>
+<meta name="description" content="دانلود OpenVPN و کانفیگ‌های آماده برای ویندوز، اندروید و آیفون — سریع، امن و پایدار.">
+
+<!-- Telegram / WhatsApp / general link-preview tags. -->
+<meta property="og:title" content="دانلود OpenVPN">
+<meta property="og:description" content="اتصال امن و پرسرعت برای ویندوز، اندروید و آیفون">
+<meta property="og:image" content="https://fsdl.ir/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fsdl.ir">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دانلود OpenVPN">
+<meta name="twitter:description" content="اتصال امن و پرسرعت برای ویندوز، اندروید و آیفون">
+<meta name="twitter:image" content="https://bigderag.ir/og-image.png">
+<meta name="theme-color" content="#eef1fb" id="themeColor">
+
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="stylesheet" href="./css/style.css">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    var theme = 'light';
+    try {
+      var saved = localStorage.getItem('theme');
+      theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (e) {
+      theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    root.setAttribute('data-theme', theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#060918' : '#eef1fb');
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#platforms">پرش به انتخاب پلتفرم</a>
+
+<!-- Ambient background -->
+<div class="backdrop" aria-hidden="true">
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+  <div class="aurora aurora-3"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="sparkles" id="sparkles"></div>
+</div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<div class="progress-bar" aria-hidden="true"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/" aria-label="دانلود OpenVPN — صفحه اصلی">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6 3.7 5.3v5.5c0 5.1 3.5 9.8 8.3 11.1 4.8-1.3 8.3-6 8.3-11.1V5.3L12 1.6Z"/><path class="brand-check" d="m8.6 11.7 2.2 2.2 4.6-4.6"/></svg>
+      </span>
+      <span class="brand-text">دانلود <strong>OpenVPN</strong></span>
+      <span class="brand-status"><span class="status-dot"></span>آنلاین</span>
+    </a>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر حالت روشن و تاریک" aria-pressed="false" title="حالت روشن / تاریک">
+      <span class="theme-knob">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-14.5V1m0 22v-1.5M4.4 4.4 3.3 3.3m17.4 17.4-1.1-1.1M2.5 12H1m22 0h-1.5M4.4 19.6l-1.1 1.1M20.7 3.3l-1.1 1.1"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.7A8.5 8.5 0 0 1 9.3 3.6a.7.7 0 0 0-.9-.9A10 10 0 1 0 21.3 15.6a.7.7 0 0 0-.9-.9Z"/></svg>
+      </span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-badge reveal" style="--d:.04s">
+      <span class="live-dot"></span>
+      اتصال امن و پرسرعت
+      <span class="badge-spark" aria-hidden="true">✦</span>
+    </div>
+
+    <h1 class="hero-title" id="heroTitle">
+      <span class="title-line title-line-1">دانلود <span class="title-grad" dir="ltr">OpenVPN</span></span>
+      <span class="title-line title-line-2">سریع، امن، بدون مرز</span>
+    </h1>
+
+    <p class="hero-sub reveal" style="--d:.16s">
+      سیستم‌عامل خود را انتخاب کنید و در کمتر از یک دقیقه
+      به اینترنت آزاد و امن وصل شوید.
+    </p>
+
+    <div class="trust-row reveal" style="--d:.24s">
+      <span class="trust">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5M12 14.5v2.5"/></svg>
+        رمزنگاری AES-256
+      </span>
+      <span class="trust">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg>
+        سرعت بالا
+      </span>
+      <span class="trust">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="13" height="10" rx="2"/><rect x="16.5" y="8" width="5" height="11" rx="1.5"/><path d="M6 18.5h6"/></svg>
+        همه دستگاه‌ها
+      </span>
+    </div>
+
+    <a class="scroll-cue reveal" style="--d:.33s" href="#platforms" aria-label="رفتن به بخش انتخاب پلتفرم">
+      <span class="scroll-ring">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </span>
+      <span>شروع کنید</span>
+    </a>
+  </section>
+
+  <!-- Platforms -->
+  <section class="section platforms" id="platforms" aria-labelledby="platformTitle">
+    <div class="sec-head reveal">
+      <div class="sec-head-main">
+        <span class="sec-kicker"><span class="sec-num">۰۱</span> گام اول</span>
+        <h2 class="sec-title" id="platformTitle">پلتفرم خود را انتخاب کنید</h2>
+      </div>
+      <p class="sec-hint">برای دیدن لینک‌های دانلود، روی کارت بزنید</p>
+    </div>
+
+    <div class="plat-grid">
+
+      <!-- Windows -->
+      <article class="plat-card reveal" data-platform="win" style="--d:.06s">
+        <button class="plat-front" type="button" aria-expanded="false" aria-controls="detail-win">
+          <span class="plat-index" aria-hidden="true">۰۱</span>
+          <span class="plat-logo">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <img src="./logos/windows.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <span class="fb" style="display:none" aria-hidden="true">🪟</span>
+          </span>
+          <span class="pname">ویندوز</span>
+          <span class="psub">Windows 10 / 11</span>
+          <span class="plat-cta">مشاهده دانلود
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+          </span>
+        </button>
+
+        <div class="plat-detail" id="detail-win" inert>
+          <div class="dv-inner">
+            <div class="dv-head">
+              <span class="dv-logo">
+                <img src="./logos/windows.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span class="fb" style="display:none" aria-hidden="true">🪟</span>
+              </span>
+              <span class="dv-titles">
+                <span class="dv-pname">ویندوز</span>
+                <span class="dv-sub"><span class="mini-dot"></span>آماده دانلود</span>
+              </span>
+              <button class="dv-back" type="button" aria-label="بستن جزئیات ویندوز">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+              </button>
+            </div>
+
+            <div class="dv-links">
+              <a href="https://dl.bigderag.ir/files/openvpn-pc.msi" class="dl-link" data-dl data-dl-label="نصب‌کننده ویندوز">
+                <span class="dl-icon" style="--ib:rgba(0,120,212,.12);--ic:#0078d4">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+                </span>
+                <span class="dl-copy">
+                  <span class="dl-title">دانلود نصب‌کننده</span>
+                  <span class="dl-sub">MSI · 120 MB · Windows 10/11</span>
+                </span>
+                <span class="dl-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+                </span>
+              </a>
+            </div>
+
+            <button class="guide-btn" type="button" data-guide="win">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg>
+              <span>آموزش اتصال</span>
+              <span class="guide-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Android -->
+      <article class="plat-card reveal" data-platform="android" style="--d:.13s">
+        <button class="plat-front" type="button" aria-expanded="false" aria-controls="detail-android">
+          <span class="plat-index" aria-hidden="true">۰۲</span>
+          <span class="plat-logo">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <img src="./logos/android.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <span class="fb" style="display:none" aria-hidden="true">🤖</span>
+          </span>
+          <span class="pname">اندروید</span>
+          <span class="psub">Android 5.0+</span>
+          <span class="plat-cta">مشاهده دانلود
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+          </span>
+        </button>
+
+        <div class="plat-detail" id="detail-android" inert>
+          <div class="dv-inner">
+            <div class="dv-head">
+              <span class="dv-logo">
+                <img src="./logos/android.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span class="fb" style="display:none" aria-hidden="true">🤖</span>
+              </span>
+              <span class="dv-titles">
+                <span class="dv-pname">اندروید</span>
+                <span class="dv-sub"><span class="mini-dot"></span>آماده دانلود</span>
+              </span>
+              <button class="dv-back" type="button" aria-label="بستن جزئیات اندروید">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+              </button>
+            </div>
+
+            <div class="dv-links">
+              <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" class="dl-link">
+                <span class="dl-icon" style="--ib:rgba(26,115,232,.12);--ic:#1a73e8">
+                  <svg class="fill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5L7 4.5Z"/></svg>
+                </span>
+                <span class="dl-copy">
+                  <span class="dl-title">Google Play</span>
+                  <span class="dl-sub">فروشگاه رسمی گوگل</span>
+                </span>
+                <span class="dl-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+                </span>
+              </a>
+
+              <a href="https://dl.bigderag.ir/files/openvpn-and.apk" class="dl-link" data-dl data-dl-label="APK اندروید">
+                <span class="dl-icon" style="--ib:rgba(34,197,94,.12);--ic:#16a34a">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+                </span>
+                <span class="dl-copy">
+                  <span class="dl-title">دانلود مستقیم APK</span>
+                  <span class="dl-sub">100 MB · نسخه اندروید</span>
+                </span>
+                <span class="dl-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+                </span>
+              </a>
+            </div>
+
+            <button class="guide-btn" type="button" data-guide="android">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg>
+              <span>آموزش اتصال</span>
+              <span class="guide-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- iOS -->
+      <article class="plat-card reveal" data-platform="ios" style="--d:.2s">
+        <button class="plat-front" type="button" aria-expanded="false" aria-controls="detail-ios">
+          <span class="plat-index" aria-hidden="true">۰۳</span>
+          <span class="plat-logo">
+            <span class="logo-ring" aria-hidden="true"></span>
+            <img src="./logos/ios.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <span class="fb" style="display:none" aria-hidden="true">🍎</span>
+          </span>
+          <span class="pname">آیفون / آیپد</span>
+          <span class="psub">iOS 13.0+</span>
+          <span class="plat-cta">مشاهده دانلود
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+          </span>
+        </button>
+
+        <div class="plat-detail" id="detail-ios" inert>
+          <div class="dv-inner">
+            <div class="dv-head">
+              <span class="dv-logo">
+                <img src="./logos/ios.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span class="fb" style="display:none" aria-hidden="true">🍎</span>
+              </span>
+              <span class="dv-titles">
+                <span class="dv-pname">آیفون / آیپد</span>
+                <span class="dv-sub"><span class="mini-dot"></span>آماده دانلود</span>
+              </span>
+              <button class="dv-back" type="button" aria-label="بستن جزئیات آیفون">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+              </button>
+            </div>
+
+            <div class="dv-links">
+              <a href="https://apps.apple.com/us/app/openvpn-connect/id590379981" class="dl-link">
+                <span class="dl-icon" style="--ib:rgba(15,23,42,.08);--ic:currentColor">
+                  <svg class="fill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.9.9-3.6.9-.8 0-1.9-.9-3.1-.9-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.2 1.8 2.5 3.1 2.4 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.9-1.1-2.9-3.8ZM14.3 5.7c.7-.8 1.1-1.9 1-3-1 0-2.2.7-2.9 1.5-.6.7-1.1 1.8-1 2.9 1.1.1 2.2-.6 2.9-1.4Z"/></svg>
+                </span>
+                <span class="dl-copy">
+                  <span class="dl-title">App Store</span>
+                  <span class="dl-sub">فروشگاه رسمی اپل</span>
+                </span>
+                <span class="dl-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+                </span>
+              </a>
+            </div>
+
+            <button class="guide-btn" type="button" data-guide="ios">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg>
+              <span>آموزش اتصال</span>
+              <span class="guide-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Configs -->
+  <section class="section configs" id="configs" aria-labelledby="configTitle">
+    <div class="sec-head reveal">
+      <div class="sec-head-main">
+        <span class="sec-kicker"><span class="sec-num">۰۲</span> گام دوم</span>
+        <h2 class="sec-title" id="configTitle">کانفیگ آماده را دانلود کنید</h2>
+      </div>
+      <p class="sec-hint">بعد از نصب برنامه، فایل را وارد کنید</p>
+    </div>
+
+    <div class="cfg-grid">
+
+      <article class="cfg-card c1 reveal" style="--d:.06s">
+        <span class="cfg-accent" aria-hidden="true"></span>
+        <svg class="cfg-watermark" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg>
+        <div class="cfg-head">
+          <span class="cfg-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg>
+          </span>
+          <div class="cfg-heading">
+            <h3 class="cfg-title">کانفیگ پرسرعت — UDP</h3>
+            <span class="cfg-proto">UDP · پورت 80</span>
+          </div>
+          <span class="cfg-signal" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="chips">
+          <span class="chip"><span class="chip-dot"></span>UDP 80</span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+            AES-256
+          </span>
+          <span class="chip">🇹🇷 Turkey</span>
+        </div>
+
+        <a href="https://dl.bigderag.ir/files/openvpn-udp.ovpn" download class="cfg-dl" data-dl data-dl-label="کانفیگ UDP">
+          <span class="cfg-dl-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+          </span>
+          <span class="cfg-dl-text">دانلود کانفیگ</span>
+          <span class="cfg-dl-shine" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <article class="cfg-card c2 reveal" style="--d:.13s">
+        <span class="cfg-accent" aria-hidden="true"></span>
+        <svg class="cfg-watermark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"/></svg>
+        <div class="cfg-head">
+          <span class="cfg-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.2 1.2M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.2-1.2"/></svg>
+          </span>
+          <div class="cfg-heading">
+            <h3 class="cfg-title">کانفیگ پایدار — TCP</h3>
+            <span class="cfg-proto">TCP · پورت 12345</span>
+          </div>
+          <span class="cfg-signal" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="chips">
+          <span class="chip"><span class="chip-dot"></span>TCP 12345</span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+            AES-256
+          </span>
+          <span class="chip">🇺🇸 USA</span>
+        </div>
+
+        <a href="https://dl.bigderag.ir/files/openvpn-tcp.ovpn" download class="cfg-dl" data-dl data-dl-label="کانفیگ TCP">
+          <span class="cfg-dl-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+          </span>
+          <span class="cfg-dl-text">دانلود کانفیگ</span>
+          <span class="cfg-dl-shine" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <article class="cfg-card c3 reveal" style="--d:.2s">
+        <span class="cfg-accent" aria-hidden="true"></span>
+        <svg class="cfg-watermark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14.6 9l6.9 2.6-6.9 2.6L12 20.7l-2.6-6.5L2.5 11.6 9.4 9 12 2.5Z"/></svg>
+        <div class="cfg-head">
+          <span class="cfg-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14.6 9l6.9 2.6-6.9 2.6L12 20.7l-2.6-6.5L2.5 11.6 9.4 9 12 2.5Z"/></svg>
+          </span>
+          <div class="cfg-heading">
+            <h3 class="cfg-title">کانفیگ Gemini</h3>
+            <span class="cfg-proto">UDP · اتصال ویژه</span>
+          </div>
+          <span class="cfg-signal" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="chips">
+          <span class="chip"><span class="chip-dot"></span>Gemini ✦</span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+            AES-256
+          </span>
+        </div>
+
+        <a href="https://dl.bigderag.ir/files/UDP-Gemini.ovpn" download class="cfg-dl" data-dl data-dl-label="کانفیگ Gemini">
+          <span class="cfg-dl-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2.5A1.5 1.5 0 0 0 5.5 21h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+          </span>
+          <span class="cfg-dl-text">دانلود کانفیگ</span>
+          <span class="cfg-dl-shine" aria-hidden="true"></span>
+        </a>
+      </article>
+
+    </div>
+
+    <div class="notice reveal" style="--d:.1s">
+      <span class="notice-ico">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6 3.7 5.3v5.5c0 5.1 3.5 9.8 8.3 11.1 4.8-1.3 8.3-6 8.3-11.1V5.3L12 1.6Z"/><path d="m8.6 11.7 2.2 2.2 4.6-4.6"/></svg>
+      </span>
+      <p>
+        <strong>نکته امنیتی:</strong>
+        فایل‌ها را فقط از همین صفحه دانلود کنید. ابتدا برنامه OpenVPN را نصب کنید،
+        سپس کانفیگ را وارد کرده و متصل شوید.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <small>© ۲۰۲۶ — همه چیز برای یک اتصال امن</small>
+  </footer>
+
+</main>
+
+<!-- Guide modal -->
+<div class="modal-overlay" id="guideModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <span class="sheet-handle" aria-hidden="true"></span>
+    <button class="modal-close" type="button" id="modalClose" aria-label="بستن راهنما">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>
+    </button>
+
+    <div class="modal-head">
+      <div class="modal-icon" id="modalIcon"></div>
+      <div class="modal-heading">
+        <span class="modal-eyebrow">راهنمای سریع</span>
+        <div class="modal-title" id="modalTitle">آموزش اتصال</div>
+      </div>
+    </div>
+
+    <div class="modal-tabs" id="modalTabs" role="tablist" aria-label="مراحل اتصال"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-ico" id="toastIco">⬇</span>
+  <span class="toast-text" id="toastText"></span>
+  <span class="toast-timer" aria-hidden="true"></span>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
